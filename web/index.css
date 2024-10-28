@@ -1,3 +1,22 @@
 * {
     box-sizing: border-box;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    color: white;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.bg > img {
+    max-width: 500px;
+}
