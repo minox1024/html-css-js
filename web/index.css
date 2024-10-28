@@ -10,11 +10,28 @@ a {
 body {
     color: white;
     background-color: pink;
+    margin: 0;
 }
 
 .container {
     display: flex;
     justify-content: center;
+}
+
+.navcontainer {
+    display: block;
+    max-width: 72vw;
+    margin-top: 10vh;
+    margin-bottom: 30px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .bg > img {
