@@ -95,6 +95,7 @@ body {
 
 .bg > img {
     max-width: 500px;
+    width: 100%;
 }
 
 @media (width <= 1075px) {
@@ -120,6 +121,6 @@ body {
         font-size: 13px;
     }
     .bg > img {
-        max-width: 400px;
+        width: 100%;
     }
 }
