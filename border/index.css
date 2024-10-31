@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(66, 66, 66);
+}
+
+h1 {
+    color: white;
+}
+
+.card {
+    padding: 32px;
+    color: rgb(200, 200, 200);
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    border-radius: 10px;
+}
