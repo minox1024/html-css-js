@@ -41,10 +41,26 @@ p {
     z-index: -1;
     padding: 3px;
     border-radius: 10px;
-    background-color: red;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095);
+    animation: 3s spin linear infinite;
 }
 
 .card::before {
     filter: blur(2rem);
     opacity: 0.5;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
