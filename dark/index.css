@@ -6,13 +6,27 @@
 
 body {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin-top: 10px;
 }
 
 button {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: none;
     padding: 1rem 3rem;
     color: white;
     background-color: rgb(48, 48, 48);
     border-radius: 4px;
     cursor: pointer;
+}
+
+.content {
+    text-align: center;
 }
