@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(24, 24, 24);
 }
 
 h1 {
@@ -19,7 +19,8 @@ h1 {
 .card {
     padding: 32px;
     color: rgb(200, 200, 200);
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(48, 48, 48);
     text-align: center;
     border-radius: 10px;
+    position: relative;
 }
