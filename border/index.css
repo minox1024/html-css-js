@@ -16,6 +16,11 @@ h1 {
     color: white;
 }
 
+p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
 .card {
     padding: 32px;
     color: rgb(200, 200, 200);
