@@ -1,3 +1,13 @@
+:root {
+    --bg-color: rgb(232, 232, 232);
+    --text-color: rgb(16, 16, 16);
+}
+
+.darkmode {
+    --bg-color: rgb(16, 16, 16);
+    --text-color: rgb(232, 232, 232);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +19,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 p {
