@@ -42,3 +42,32 @@ button {
 .content {
     text-align: center;
 }
+
+#theme-switch {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch img {
+    user-select: none;
+}
+
+#theme-switch img:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:first-child {
+    display: block;
+}
+
+.darkmode #theme-switch img:last-child {
+    display: none;
+}
