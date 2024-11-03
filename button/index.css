@@ -13,6 +13,8 @@ body {
 }
 
 button {
+    cursor: pointer;
+    user-select: none;
     padding: 1em 2em;
     color: rgb(230, 230, 230);
     background-color: rgb(48, 48, 48);
