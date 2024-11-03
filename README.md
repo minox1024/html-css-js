@@ -1,5 +1,7 @@
 # html-css-js
 
+These are my web development practice projects.
+
 ## border
 
 [Tutorial](https://www.youtube.com/watch?v=ezP4kbOvs_E)
