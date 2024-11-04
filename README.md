@@ -32,6 +32,12 @@ These are my web development practice projects.
 
 ![glow](/_preview/glow-Screenshot%202024-11-03%20at%2018.15.24.png)
 
+## input
+
+[Tutorial](https://www.youtube.com/watch?v=N7JzedBBiBc)
+
+![input](/_preview/input-Screenshot%202024-11-04%20at%2018.02.04.png)
+
 ## login
 
 [Tutorial](https://www.youtube.com/watch?v=qROcffueh5M)
