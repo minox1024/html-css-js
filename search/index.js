@@ -41,5 +41,6 @@ function displayResult(result) {
 
 function selectInput(item) {
     inputBox.value = item.innerHTML;
+    inputBox.focus();
     resultBox.innerHTML = "";
 }
