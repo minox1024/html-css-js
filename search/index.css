@@ -29,7 +29,7 @@ body {
     border: none;
     outline: none;
     font-size: 18px;
-    color: rgb(99, 99, 99);
+    color: black;
 }
 
 .search-button {
@@ -43,6 +43,11 @@ body {
 
 ::placeholder {
     color: rgb(99, 99, 99);
+}
+
+.result-box {
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .result-box ul {
