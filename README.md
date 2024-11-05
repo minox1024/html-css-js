@@ -44,6 +44,12 @@ These are my web development practice projects.
 
 ![login](/_preview/login-Screenshot%202024-11-03%20at%2018.14.50.png)
 
+## search
+
+[Tutorial](https://www.youtube.com/watch?v=pdyFf1ugVfk)
+
+![search](/_preview/search-Screenshot%202024-11-05%20at%2016.46.17.png)
+
 ## web
 
 [Tutorial](https://www.youtube.com/watch?v=Nk0kiq-hss0)
