@@ -44,3 +44,19 @@ body {
 ::placeholder {
     color: rgb(99, 99, 99);
 }
+
+.result-box ul {
+    border-top: 1px solid black;
+    padding: 5px 0;
+}
+
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.result-box ul li:hover {
+    background-color: rgb(150, 220, 255);
+}
