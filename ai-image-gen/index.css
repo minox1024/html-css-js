@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(72, 132, 232);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 520px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 6px 10px 16px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(220, 220, 220);
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+.gen-form {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    width: 80%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    background-color: transparent;
+    border: 1px solid rgb(220, 220, 220);
+    transition: all 0.2s ease;
+}
+
+input:hover, input:focus {
+    border-color: rgb(130, 110, 232);
+}
+
+button {
+    width: 20%;
+    height: 36px;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(48, 48, 48);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(130, 110, 232);
+    border-color: transparent;
+}
+
+#loading {
+    display: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
