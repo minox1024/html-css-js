@@ -8,5 +8,17 @@
     <title>AI Image Generator</title>
 </head>
 <body>
+    <div class="container">
+        <h1>AI Image Generator</h1>
+        <p>Write your prompt here to generate images with power of AI.</p>
+        <form class="gen-form">
+            <input id="user-prompt" type="text" placeholder="Type your prompt here" autocomplete="off">
+            <button id="generate-button" type="button">Generate</button>
+        </form>
+        <div class="result">
+            <div id="loading">Generating...</div>
+            <div id="image-grid"></div>
+        </div>
+    </div>
 </body>
 </html>
