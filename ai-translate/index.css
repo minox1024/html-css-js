@@ -22,29 +22,29 @@ h1 {
 .panel {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 12px;
 }
 
 .input {
     flex: 1;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .output {
     flex: 1;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .input-bar, .output-bar {
-    width: 80px;
+    display: flex;
     height: 50px;
     margin: 0 10px;
 }
 
 .input-bar > button, .output-bar > button {
-    width: 100%;
     height: 100%;
+    padding: 10px;
     border: none;
     cursor: pointer;
     border-bottom: 2px solid rgb(10, 100, 255);
