@@ -47,16 +47,18 @@ h1 {
     padding: 10px;
     border: none;
     cursor: pointer;
-    border-bottom: 2px solid rgb(10, 100, 255);
-    color: rgb(10, 100, 255);
     background-color: white;
     text-align: center;
     font-size: 16px;
 }
 
+button.selected {
+    border-bottom: 2px solid rgb(10, 100, 255);
+    color: rgb(10, 100, 255);
+}
+
 .input-bar > button:hover, .output-bar > button:hover {
-    border-bottom: 2px solid rgb(10, 30, 180);
-    background-color: rgb(242, 242, 255);
+    background-color: rgb(242, 242, 242);
 }
 
 textarea {
