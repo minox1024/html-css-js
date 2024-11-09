@@ -23,17 +23,30 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .input-bar, .output-bar {
     width: 80px;
-    height: 32px;
-    margin: 0 30px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.input-bar > button, .output-bar > button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
     border-bottom: 2px solid rgb(10, 100, 255);
     color: rgb(10, 100, 255);
+    background-color: white;
     text-align: center;
     font-size: 16px;
+}
+
+.input-bar > button:hover, .output-bar > button:hover {
+    border-bottom: 2px solid rgb(10, 30, 180);
+    background-color: rgb(242, 242, 255);
 }
 
 textarea {
