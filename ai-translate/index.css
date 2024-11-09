@@ -10,6 +10,8 @@ body {
 }
 
 .header {
+    display: flex;
+    align-items: center;
     border: 1px solid rgb(210, 210, 210);
 }
 
@@ -17,6 +19,27 @@ h1 {
     margin: 20px 50px;
     font-size: 30px;
     color: rgb(99, 99, 99);
+}
+
+.token-bar {
+    height: 30px;
+}
+
+.token-bar > span {
+    height: 100%;
+    font-size: 18px;
+}
+
+.token-bar > input {
+    height: 100%;
+    padding: 0 5px;
+    width: 300px;
+}
+
+.token-bar > button {
+    height: 100%;
+    padding: 0 5px;
+    font-size: 14px;
 }
 
 .panel {
