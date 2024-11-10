@@ -1,4 +1,5 @@
 const Model_EN2TR = "Helsinki-NLP/opus-mt-tc-big-en-tr";
+const Model_TR2EN = "Helsinki-NLP/opus-mt-tc-big-tr-en";
 let modelName = Model_EN2TR;
 
 const tokenInput = document.getElementById("token-input");
@@ -26,18 +27,22 @@ function selectOutputLanguage(language) {
 }
 
 inputEnglish.onclick = () => {
+    modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
 };
 inputTurkish.onclick = () => {
+    modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
 };
 outputEnglish.onclick = () => {
+    modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
 };
 outputTurkish.onclick = () => {
+    modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
 };
