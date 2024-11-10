@@ -1,3 +1,6 @@
+const Model_EN2TR = "Helsinki-NLP/opus-mt-tc-big-en-tr";
+let modelName = Model_EN2TR;
+
 const tokenInput = document.getElementById("token-input");
 const commitToken = document.getElementById("commit-token");
 const inputTextArea = document.getElementById("input-textarea");
@@ -17,3 +20,29 @@ commitToken.onclick = () => {
         alert("Access token removed.")
     }
 };
+
+async function query(data) {
+    const response = await fetch(
+        `https://api-inference.huggingface.co/models/${modelName}`,
+        {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        }
+    );
+    const result = await response.json();
+    return result;
+}
+
+inputTextArea.addEventListener("input", () => {
+    if (inputTextArea.value.length > 0) {
+        query({ inputs: inputTextArea.value }).then((response) => {
+            outputTextArea.value = response[0]["translation_text"];
+        });
+    } else {
+        outputTextArea.value = "Translation";
+    }
+});
