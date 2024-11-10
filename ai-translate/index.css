@@ -33,13 +33,24 @@ h1 {
 .token-bar > input {
     height: 100%;
     padding: 0 5px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
     width: 300px;
 }
 
 .token-bar > button {
     height: 100%;
-    padding: 0 5px;
+    padding: 0 8px;
     font-size: 14px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.token-bar > button:hover {
+    background-color: rgb(150, 150, 255);
 }
 
 .panel {
