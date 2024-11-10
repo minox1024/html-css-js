@@ -5,6 +5,42 @@ const tokenInput = document.getElementById("token-input");
 const commitToken = document.getElementById("commit-token");
 const inputTextArea = document.getElementById("input-textarea");
 const outputTextArea = document.getElementById("output-textarea");
+const inputEnglish = document.getElementById("input-english");
+const inputTurkish = document.getElementById("input-turkish");
+const outputEnglish = document.getElementById("output-english");
+const outputTurkish = document.getElementById("output-turkish");
+
+let currentInputLanguage = inputEnglish;
+let currentOutputLanguage = outputTurkish;
+
+function selectInputLanguage(language) {
+    currentInputLanguage.classList.remove("selected");
+    currentInputLanguage = language;
+    currentInputLanguage.classList.add("selected");
+}
+
+function selectOutputLanguage(language) {
+    currentOutputLanguage.classList.remove("selected");
+    currentOutputLanguage = language;
+    currentOutputLanguage.classList.add("selected");
+}
+
+inputEnglish.onclick = () => {
+    selectInputLanguage(inputEnglish);
+    selectOutputLanguage(outputTurkish);
+};
+inputTurkish.onclick = () => {
+    selectInputLanguage(inputTurkish);
+    selectOutputLanguage(outputEnglish);
+};
+outputEnglish.onclick = () => {
+    selectInputLanguage(inputTurkish);
+    selectOutputLanguage(outputEnglish);
+};
+outputTurkish.onclick = () => {
+    selectInputLanguage(inputEnglish);
+    selectOutputLanguage(outputTurkish);
+};
 
 let accessToken = localStorage.getItem("access-token");
 if (accessToken !== null && accessToken.length > 0) {
@@ -57,3 +93,5 @@ inputTextArea.addEventListener("input", () => {
         outputTextArea.value = "Translation";
     }
 });
+
+inputTextArea.focus();
