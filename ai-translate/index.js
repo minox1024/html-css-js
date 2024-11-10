@@ -43,10 +43,14 @@ inputTextArea.addEventListener("input", () => {
     if (inputTextArea.value.length > 0) {
         clearTimeout(debounceTimeout);
         debounceTimeout = setTimeout(() => {
-            query({ inputs: inputTextArea.value }).then((response) => {
-                outputTextArea.classList.remove("placeholder");
-                outputTextArea.value = response[0]["translation_text"];
-            });
+            if (inputTextArea.value.length > 0) {
+                query({ inputs: inputTextArea.value }).then((response) => {
+                    if (response[0] && response[0]["translation_text"]) {
+                        outputTextArea.classList.remove("placeholder");
+                        outputTextArea.value = response[0]["translation_text"];
+                    }
+                });
+            }
         }, 700);
     } else {
         outputTextArea.classList.add("placeholder");
