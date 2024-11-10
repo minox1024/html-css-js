@@ -2,6 +2,12 @@
 
 These are my web development practice projects.
 
+## ai-translate
+
+[Made by Mino](https://github.com/minox1024)
+
+![ai-translate](/_preview/ai-translate-Screenshot%202024-11-10%20at%2015.00.44.png)
+
 ## border
 
 [Tutorial - Coding2GO](https://www.youtube.com/watch?v=ezP4kbOvs_E)
