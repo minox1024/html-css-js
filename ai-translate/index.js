@@ -37,12 +37,19 @@ async function query(data) {
     return result;
 }
 
+let debounceTimeout;
+
 inputTextArea.addEventListener("input", () => {
     if (inputTextArea.value.length > 0) {
-        query({ inputs: inputTextArea.value }).then((response) => {
-            outputTextArea.value = response[0]["translation_text"];
-        });
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(() => {
+            query({ inputs: inputTextArea.value }).then((response) => {
+                outputTextArea.classList.remove("placeholder");
+                outputTextArea.value = response[0]["translation_text"];
+            });
+        }, 700);
     } else {
+        outputTextArea.classList.add("placeholder");
         outputTextArea.value = "Translation";
     }
 });
