@@ -1,5 +1,7 @@
 const Model_EN2TR = "Helsinki-NLP/opus-mt-tc-big-en-tr";
 const Model_TR2EN = "Helsinki-NLP/opus-mt-tc-big-tr-en";
+const Model_EN2ZH = "Helsinki-NLP/opus-mt-en-zh";
+const Model_ZH2EN = "Helsinki-NLP/opus-mt-zh-en";
 let modelName = Model_EN2TR;
 
 const tokenInput = document.getElementById("token-input");
@@ -8,8 +10,10 @@ const inputTextArea = document.getElementById("input-textarea");
 const outputTextArea = document.getElementById("output-textarea");
 const inputEnglish = document.getElementById("input-english");
 const inputTurkish = document.getElementById("input-turkish");
+const inputChinese = document.getElementById("input-chinese");
 const outputEnglish = document.getElementById("output-english");
 const outputTurkish = document.getElementById("output-turkish");
+const outputChinese = document.getElementById("output-chinese");
 
 let currentInputLanguage = inputEnglish;
 let currentOutputLanguage = outputTurkish;
@@ -36,6 +40,11 @@ inputTurkish.onclick = () => {
     selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
 };
+inputChinese.onclick = () => {
+    modelName = Model_ZH2EN;
+    selectInputLanguage(inputChinese);
+    selectOutputLanguage(outputEnglish);
+};
 outputEnglish.onclick = () => {
     modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
@@ -45,6 +54,11 @@ outputTurkish.onclick = () => {
     modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
+};
+outputChinese.onclick = () => {
+    modelName = Model_EN2ZH;
+    selectInputLanguage(inputEnglish);
+    selectOutputLanguage(outputChinese);
 };
 
 let accessToken = localStorage.getItem("access-token");
