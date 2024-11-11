@@ -31,38 +31,26 @@ function selectOutputLanguage(language) {
 }
 
 inputEnglish.onclick = () => {
-    modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
-    selectOutputLanguage(outputTurkish);
     inputTextArea.focus();
 };
 inputTurkish.onclick = () => {
-    modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
-    selectOutputLanguage(outputEnglish);
     inputTextArea.focus();
 };
 inputChinese.onclick = () => {
-    modelName = Model_ZH2EN;
     selectInputLanguage(inputChinese);
-    selectOutputLanguage(outputEnglish);
     inputTextArea.focus();
 };
 outputEnglish.onclick = () => {
-    modelName = Model_TR2EN;
-    selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
     inputTextArea.focus();
 };
 outputTurkish.onclick = () => {
-    modelName = Model_EN2TR;
-    selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
     inputTextArea.focus();
 };
 outputChinese.onclick = () => {
-    modelName = Model_EN2ZH;
-    selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputChinese);
     inputTextArea.focus();
 };
@@ -101,6 +89,84 @@ async function query(data) {
     return result;
 }
 
+function translateNothing() {
+    outputTextArea.classList.remove("placeholder");
+    outputTextArea.value = inputTextArea.value;
+}
+
+function translateModel() {
+    query({ inputs: inputTextArea.value }).then((response) => {
+        if (response[0] && response[0]["translation_text"]) {
+            outputTextArea.classList.remove("placeholder");
+            outputTextArea.value = response[0]["translation_text"];
+        }
+    });
+}
+
+function translateEnglishToTurkish() {
+    modelName = Model_EN2TR;
+    translateModel();
+}
+
+function translateEnglishToChinese() {
+    modelName = Model_EN2ZH;
+    translateModel();
+}
+
+function translateTurkishToEnglish() {
+    modelName = Model_TR2EN;
+    translateModel();
+}
+
+function translateTurkishToChinese() {
+
+}
+
+function translateChineseToEnglish() {
+    modelName = Model_ZH2EN;
+    translateModel();
+}
+
+function translateChineseToTurkish() {
+
+}
+
+function translate() {
+    if (currentInputLanguage === inputEnglish) {
+        if (currentOutputLanguage === outputEnglish) {
+            translateNothing();
+        }
+        if (currentOutputLanguage === outputTurkish) {
+            translateEnglishToTurkish();
+        }
+        if (currentOutputLanguage === outputChinese) {
+            translateEnglishToChinese();
+        }
+    }
+    if (currentInputLanguage === inputTurkish) {
+        if (currentOutputLanguage === outputEnglish) {
+            translateTurkishToEnglish();
+        }
+        if (currentOutputLanguage === outputTurkish) {
+            translateNothing();
+        }
+        if (currentOutputLanguage === outputChinese) {
+            translateTurkishToChinese();
+        }
+    }
+    if (currentInputLanguage === inputChinese) {
+        if (currentOutputLanguage === outputEnglish) {
+            translateChineseToEnglish();
+        }
+        if (currentOutputLanguage === outputTurkish) {
+            translateChineseToTurkish();
+        }
+        if (currentOutputLanguage === outputChinese) {
+            translateNothing();
+        }
+    }
+}
+
 let debounceTimeout;
 
 inputTextArea.addEventListener("input", () => {
@@ -108,12 +174,7 @@ inputTextArea.addEventListener("input", () => {
         clearTimeout(debounceTimeout);
         debounceTimeout = setTimeout(() => {
             if (inputTextArea.value.length > 0) {
-                query({ inputs: inputTextArea.value }).then((response) => {
-                    if (response[0] && response[0]["translation_text"]) {
-                        outputTextArea.classList.remove("placeholder");
-                        outputTextArea.value = response[0]["translation_text"];
-                    }
-                });
+                translate();
             }
         }, 700);
     } else {
