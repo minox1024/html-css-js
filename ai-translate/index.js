@@ -34,31 +34,37 @@ inputEnglish.onclick = () => {
     modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
+    inputTextArea.focus();
 };
 inputTurkish.onclick = () => {
     modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
+    inputTextArea.focus();
 };
 inputChinese.onclick = () => {
     modelName = Model_ZH2EN;
     selectInputLanguage(inputChinese);
     selectOutputLanguage(outputEnglish);
+    inputTextArea.focus();
 };
 outputEnglish.onclick = () => {
     modelName = Model_TR2EN;
     selectInputLanguage(inputTurkish);
     selectOutputLanguage(outputEnglish);
+    inputTextArea.focus();
 };
 outputTurkish.onclick = () => {
     modelName = Model_EN2TR;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputTurkish);
+    inputTextArea.focus();
 };
 outputChinese.onclick = () => {
     modelName = Model_EN2ZH;
     selectInputLanguage(inputEnglish);
     selectOutputLanguage(outputChinese);
+    inputTextArea.focus();
 };
 
 let accessToken = localStorage.getItem("access-token");
