@@ -103,6 +103,21 @@ function translateModel() {
     });
 }
 
+function translateBetween(source, target) {
+    modelName = source;
+    query({ inputs: inputTextArea.value }).then((response) => {
+        if (response[0] && response[0]["translation_text"]) {
+            modelName = target;
+            query({ inputs: response[0]["translation_text"] }).then((res) => {
+                if (res[0] && res[0]["translation_text"]) {
+                    outputTextArea.classList.remove("placeholder");
+                    outputTextArea.value = res[0]["translation_text"];
+                }
+            });
+        }
+    });
+}
+
 function translateEnglishToTurkish() {
     modelName = Model_EN2TR;
     translateModel();
@@ -119,7 +134,7 @@ function translateTurkishToEnglish() {
 }
 
 function translateTurkishToChinese() {
-
+    translateBetween(Model_TR2EN, Model_EN2ZH);
 }
 
 function translateChineseToEnglish() {
@@ -128,7 +143,7 @@ function translateChineseToEnglish() {
 }
 
 function translateChineseToTurkish() {
-
+    translateBetween(Model_ZH2EN, Model_EN2TR);
 }
 
 function translate() {
