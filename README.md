@@ -8,6 +8,8 @@ These are my web development practice projects.
 
 - I live in Ankara, I am a student at Hacettepe University.
 
+[Preview](https://ai-translate-three.vercel.app)
+
 ![ai-translate](/_preview/ai-translate-Screenshot%202024-11-12%20at%2023.12.38.png)
 
 ## border
