@@ -32,6 +32,8 @@ These are my web development practice projects.
 
 [Tutorial - Coding2GO](https://www.youtube.com/watch?v=_gKEUYarehE)
 
+[Preview](https://dark-sable.vercel.app)
+
 ![dark](/_preview/dark-Screenshot%202024-11-03%20at%2018.34.15.png)
 
 ## glass
