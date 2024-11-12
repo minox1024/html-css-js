@@ -6,15 +6,17 @@ These are my web development practice projects.
 
 [Made by Mino](https://github.com/minox1024)
 
-- I live in Ankara, I am a student at Hacettepe University.
-
 [Preview](https://ai-translate-three.vercel.app)
+
+- I live in Ankara, I am a student at Hacettepe University.
 
 ![ai-translate](/_preview/ai-translate-Screenshot%202024-11-12%20at%2023.12.38.png)
 
 ## border
 
 [Tutorial - Coding2GO](https://www.youtube.com/watch?v=ezP4kbOvs_E)
+
+[Preview](https://border-eight.vercel.app)
 
 ![border](/_preview/border-Screenshot%202024-11-03%20at%2018.35.31.png)
 
