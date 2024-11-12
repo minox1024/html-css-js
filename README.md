@@ -6,7 +6,9 @@ These are my web development practice projects.
 
 [Made by Mino](https://github.com/minox1024)
 
-![ai-translate](/_preview/ai-translate-Screenshot%202024-11-10%20at%2015.00.44.png)
+- I live in Ankara, I am a student at Hacettepe University.
+
+![ai-translate](/_preview/ai-translate-Screenshot%202024-11-12%20at%2023.12.38.png)
 
 ## border
 
