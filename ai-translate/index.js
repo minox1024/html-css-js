@@ -18,6 +18,35 @@ const outputChinese = document.getElementById("output-chinese");
 let currentInputLanguage = inputEnglish;
 let currentOutputLanguage = outputTurkish;
 
+const inputLang = localStorage.getItem("input-lang");
+if (inputLang) {
+    if (inputLang === "english") {
+        currentInputLanguage = inputEnglish;
+    }
+    if (inputLang === "turkish") {
+        currentInputLanguage = inputTurkish;
+    }
+    if (inputLang === "chinese") {
+        currentInputLanguage = inputChinese;
+    }
+}
+
+const outputLang = localStorage.getItem("output-lang");
+if (outputLang) {
+    if (outputLang === "english") {
+        currentOutputLanguage = outputEnglish;
+    }
+    if (outputLang === "turkish") {
+        currentOutputLanguage = outputTurkish;
+    }
+    if (outputLang === "chinese") {
+        currentOutputLanguage = outputChinese;
+    }
+}
+
+currentInputLanguage.classList.add("selected");
+currentOutputLanguage.classList.add("selected");
+
 function selectInputLanguage(language) {
     currentInputLanguage.classList.remove("selected");
     currentInputLanguage = language;
@@ -33,26 +62,32 @@ function selectOutputLanguage(language) {
 inputEnglish.onclick = () => {
     selectInputLanguage(inputEnglish);
     inputTextArea.focus();
+    localStorage.setItem("input-lang", "english");
 };
 inputTurkish.onclick = () => {
     selectInputLanguage(inputTurkish);
     inputTextArea.focus();
+    localStorage.setItem("input-lang", "turkish");
 };
 inputChinese.onclick = () => {
     selectInputLanguage(inputChinese);
     inputTextArea.focus();
+    localStorage.setItem("input-lang", "chinese");
 };
 outputEnglish.onclick = () => {
     selectOutputLanguage(outputEnglish);
     inputTextArea.focus();
+    localStorage.setItem("output-lang", "english");
 };
 outputTurkish.onclick = () => {
     selectOutputLanguage(outputTurkish);
     inputTextArea.focus();
+    localStorage.setItem("output-lang", "turkish");
 };
 outputChinese.onclick = () => {
     selectOutputLanguage(outputChinese);
     inputTextArea.focus();
+    localStorage.setItem("output-lang", "chinese");
 };
 
 let accessToken = localStorage.getItem("access-token");
