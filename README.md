@@ -40,6 +40,8 @@ These are my web development practice projects.
 
 [Tutorial - Coding2GO](https://www.youtube.com/watch?v=n77yqF5fdBE)
 
+[Preview](https://glass-alpha-lyart.vercel.app)
+
 ![glass](/_preview/glass-Screenshot%202024-11-03%20at%2018.33.31.png)
 
 ## glow
@@ -69,6 +71,8 @@ These are my web development practice projects.
 ## search
 
 [Tutorial - GreatStack](https://www.youtube.com/watch?v=pdyFf1ugVfk)
+
+[Preview](https://search-sigma-ten.vercel.app)
 
 ![search](/_preview/search-Screenshot%202024-11-05%20at%2016.46.17.png)
 
