@@ -66,6 +66,8 @@ These are my web development practice projects.
 
 [Tutorial - AsmrProg](https://www.youtube.com/watch?v=qROcffueh5M)
 
+[Preview](https://login-eight-coral.vercel.app)
+
 ![login](/_preview/login-Screenshot%202024-11-03%20at%2018.14.50.png)
 
 ## search
@@ -79,5 +81,7 @@ These are my web development practice projects.
 ## web
 
 [Tutorial - AsmrProg](https://www.youtube.com/watch?v=Nk0kiq-hss0)
+
+[Preview](https://web-six-tau-58.vercel.app)
 
 ![web](/_preview/web-Screenshot%202024-11-03%20at%2018.10.36.png)
