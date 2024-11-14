@@ -48,11 +48,15 @@ These are my web development practice projects.
 
 [Tutorial - Tapas Kumar Dash](https://www.youtube.com/watch?v=CNkuq5CudBM)
 
+[Preview](https://glow-beta.vercel.app)
+
 ![glow](/_preview/glow-Screenshot%202024-11-03%20at%2018.15.24.png)
 
 ## input
 
 [Tutorial - Tapas Kumar Dash](https://www.youtube.com/watch?v=N7JzedBBiBc)
+
+[Preview](https://input-sepia.vercel.app)
 
 ![input](/_preview/input-Screenshot%202024-11-04%20at%2018.02.04.png)
 
